@@ -34,9 +34,9 @@ class StubGeneratorCommand extends Command
     protected function getArguments(): array
     {
         return [
-            ['type', InputArgument::REQUIRED, 'The type of the generate.'],
-            ['name', InputArgument::REQUIRED, 'The name of the action.'],
-            ['parent', InputArgument::OPTIONAL, 'The name of the parent .'],
+          ['type', InputArgument::REQUIRED, 'The type of the generate.'],
+          ['name', InputArgument::REQUIRED, 'The name of the action.'],
+          ['parent', InputArgument::OPTIONAL, 'The name of the parent .'],
         ];
     }
 

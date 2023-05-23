@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'directories' => [],
-    'fileTypeRewrite' => [
-        '.php',
-        '.stub',
-        '.json',
-    ],
-    'fileTypeRemove' => [
-        '.stub',
-    ],
+  'directories'     => [],
+  'fileTypeRewrite' => [
+    '.php',
+    '.stub',
+    '.json',
+  ],
+  'fileTypeRemove'  => [
+    '.stub',
+  ],
 ];

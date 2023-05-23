@@ -9,154 +9,154 @@
 
     <!-- https://codepen.io/anandaprojapati/pen/GmrwYE -->
     <style>
-        body {
-            font-family: Verdana, Geneva, sans-serif;
-            font-size: 14px;
-            background: #f2f2f2;
-        }
+      body {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 14px;
+        background: #f2f2f2;
+      }
 
 
-        .form_wrapper {
-            background: #fff;
-            width: 50%;
-            max-width: 100%;
-            box-sizing: border-box;
-            padding: 10px;
-            margin: 30px auto 0;
-            position: relative;
-            z-index: 1;
-            border-top: 5px solid #f5ba1a;
-            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-            -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-            -webkit-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-            -webkit-transition: none;
-            transition: none;
-            -webkit-animation: expand 0.8s 0.6s ease-out forwards;
-            animation: expand 0.8s 0.6s ease-out forwards;
-        }
+      .form_wrapper {
+        background: #fff;
+        width: 50%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 30px auto 0;
+        position: relative;
+        z-index: 1;
+        border-top: 5px solid #f5ba1a;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        -webkit-transition: none;
+        transition: none;
+        -webkit-animation: expand 0.8s 0.6s ease-out forwards;
+        animation: expand 0.8s 0.6s ease-out forwards;
+      }
 
-        .form_wrapper h2 {
-            font-size: 1.5em;
-            line-height: 1.5em;
-            margin: 0;
-        }
+      .form_wrapper h2 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin: 0;
+      }
 
-        .form_wrapper .title_container {
-            text-align: center;
-            padding-bottom: 15px;
-        }
+      .form_wrapper .title_container {
+        text-align: center;
+        padding-bottom: 15px;
+      }
 
-        .form_wrapper h3 {
-            font-size: 1.1em;
-            font-weight: normal;
-            line-height: 1.5em;
-            margin: 0;
-        }
+      .form_wrapper h3 {
+        font-size: 1.1em;
+        font-weight: normal;
+        line-height: 1.5em;
+        margin: 0;
+      }
 
-        .form_wrapper label {
-            font-size: 12px;
-        }
+      .form_wrapper label {
+        font-size: 12px;
+      }
 
-        .form_wrapper .row {
-            margin: 10px -15px;
-        }
+      .form_wrapper .row {
+        margin: 10px -15px;
+      }
 
-        .form_wrapper .row > div {
-            padding: 0 15px;
-            box-sizing: border-box;
-        }
+      .form_wrapper .row > div {
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
 
+      .form_wrapper .col_half {
+        width: 50%;
+        float: left;
+      }
+
+      .form_wrapper .input_field {
+        position: relative;
+        margin-bottom: 10px;
+        -webkit-animation: bounce 0.6s ease-out;
+        animation: bounce 0.6s ease-out;
+      }
+
+      .form_wrapper input[type=text], .form_wrapper select, .form_wrapper input[type=email], .form_wrapper input[type=password] {
+        width: 100%;
+        padding: 8px 10px 9px;
+        height: 35px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        outline: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .form_wrapper input[type=text]:hover, .form_wrapper input[type=email]:hover, .form_wrapper input[type=password]:hover {
+        background: #fafafa;
+      }
+
+      .form_wrapper input[type=text]:focus, .form_wrapper input[type=email]:focus, .form_wrapper input[type=password]:focus {
+        -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        border: 1px solid #f5ba1a;
+        background: #fafafa;
+      }
+
+      .form_wrapper input[type=submit] {
+        background: #f5ba1a;
+        height: 35px;
+        line-height: 35px;
+        width: 100%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .form_wrapper input[type=submit]:hover {
+        background: #e1a70a;
+      }
+
+      .form_wrapper input[type=submit]:focus {
+        background: #e1a70a;
+      }
+
+
+      .form_container .row .col_half.last {
+        border-left: 1px solid #cccccc;
+      }
+
+
+      @media (max-width: 600px) {
         .form_wrapper .col_half {
-            width: 50%;
-            float: left;
+          width: 100%;
+          float: none;
         }
 
-        .form_wrapper .input_field {
-            position: relative;
-            margin-bottom: 10px;
-            -webkit-animation: bounce 0.6s ease-out;
-            animation: bounce 0.6s ease-out;
+        .bottom_row .col_half {
+          width: 50%;
+          float: left;
         }
-
-        .form_wrapper input[type=text], .form_wrapper select, .form_wrapper input[type=email], .form_wrapper input[type=password] {
-            width: 100%;
-            padding: 8px 10px 9px;
-            height: 35px;
-            border: 1px solid #cccccc;
-            box-sizing: border-box;
-            outline: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .form_wrapper input[type=text]:hover, .form_wrapper input[type=email]:hover, .form_wrapper input[type=password]:hover {
-            background: #fafafa;
-        }
-
-        .form_wrapper input[type=text]:focus, .form_wrapper input[type=email]:focus, .form_wrapper input[type=password]:focus {
-            -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-            -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-            box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-            border: 1px solid #f5ba1a;
-            background: #fafafa;
-        }
-
-        .form_wrapper input[type=submit] {
-            background: #f5ba1a;
-            height: 35px;
-            line-height: 35px;
-            width: 100%;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            color: #fff;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .form_wrapper input[type=submit]:hover {
-            background: #e1a70a;
-        }
-
-        .form_wrapper input[type=submit]:focus {
-            background: #e1a70a;
-        }
-
 
         .form_container .row .col_half.last {
-            border-left: 1px solid #cccccc;
+          border-left: none;
         }
 
-
-        @media (max-width: 600px) {
-            .form_wrapper .col_half {
-                width: 100%;
-                float: none;
-            }
-
-            .bottom_row .col_half {
-                width: 50%;
-                float: left;
-            }
-
-            .form_container .row .col_half.last {
-                border-left: none;
-            }
-
-            .remember_me {
-                padding-bottom: 20px;
-            }
+        .remember_me {
+          padding-bottom: 20px;
         }
+      }
     </style>
 </head>
 <body>
@@ -221,54 +221,54 @@
 </div>
 <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-    function setAllCheckboxes(divId, sourceCheckbox) {
-        let divElement = document.getElementById(divId);
-        let inputElements = divElement.getElementsByTagName('input');
-        for (let i = 0; i < inputElements.length; i++) {
-            if (inputElements[i].type !== 'checkbox') {
-                continue;
-            }
-            inputElements[i].checked = sourceCheckbox.checked;
-        }
+  function setAllCheckboxes(divId, sourceCheckbox) {
+    let divElement = document.getElementById(divId);
+    let inputElements = divElement.getElementsByTagName('input');
+    for (let i = 0; i < inputElements.length; i++) {
+      if (inputElements[i].type !== 'checkbox') {
+        continue;
+      }
+      inputElements[i].checked = sourceCheckbox.checked;
     }
+  }
 
-    function UCFirstString(str) {
-        let firstLetter = str.slice(0, 1);
-        return firstLetter.toUpperCase() + str.substring(1);
+  function UCFirstString(str) {
+    let firstLetter = str.slice(0, 1);
+    return firstLetter.toUpperCase() + str.substring(1);
+  }
+
+  function LCFirstString(str) {
+    let firstLetter = str.slice(0, 1);
+    return firstLetter.toLowerCase() + str.substring(1);
+  }
+
+  function ToSnakeCase(str) {
+    return str
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+      .map(x => x.toLowerCase())
+      .join('_');
+  }
+
+  function replaceNameListFiles(stubName) {
+    if (stubName === null || stubName === '') {
+      stubName = 'x';
     }
-
-    function LCFirstString(str) {
-        let firstLetter = str.slice(0, 1);
-        return firstLetter.toLowerCase() + str.substring(1);
-    }
-
-    function ToSnakeCase(str) {
-        return str
-            .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-            .map(x => x.toLowerCase())
-            .join('_');
-    }
-
-    function replaceNameListFiles(stubName) {
-        if (stubName === null || stubName === '') {
-            stubName = 'x';
-        }
-        let todayDate = new Date();
-        $('*[data-real-name]').each(function () {
-            $(this).find('span').html($(this).attr('data-real-name').replace('.stub', '')
-                .replace('%YEAR%', todayDate.getFullYear()).replace('%MONTH%', todayDate.getMonth() + 1).replace('%DAY%', todayDate.getDate()).replace('%TIMESTAMP%', Math.floor(todayDate.getTime() / 1000))
-                .replace('%STUDLY_NAME%', UCFirstString(stubName)).replace('%LOWER_NAME%', LCFirstString(stubName)).replace('%SNAKE_NAME%', ToSnakeCase(stubName))
-                .replace('TestTest', UCFirstString(stubName)).replace('testTest', LCFirstString(stubName)).replace('test_test', ToSnakeCase(stubName)),
-            );
-        });
-    }
-
-    window.addEventListener('load', (event) => {
-        replaceNameListFiles($('#stubName').val());
-        $('#stubName').on('keyup', function () {
-            replaceNameListFiles($(this).val());
-        });
+    let todayDate = new Date();
+    $('*[data-real-name]').each(function () {
+      $(this).find('span').html($(this).attr('data-real-name').replace('.stub', '')
+        .replace('%YEAR%', todayDate.getFullYear()).replace('%MONTH%', todayDate.getMonth() + 1).replace('%DAY%', todayDate.getDate()).replace('%TIMESTAMP%', Math.floor(todayDate.getTime() / 1000))
+        .replace('%STUDLY_NAME%', UCFirstString(stubName)).replace('%LOWER_NAME%', LCFirstString(stubName)).replace('%SNAKE_NAME%', ToSnakeCase(stubName))
+        .replace('TestTest', UCFirstString(stubName)).replace('testTest', LCFirstString(stubName)).replace('test_test', ToSnakeCase(stubName)),
+      );
     });
+  }
+
+  window.addEventListener('load', (event) => {
+    replaceNameListFiles($('#stubName').val());
+    $('#stubName').on('keyup', function () {
+      replaceNameListFiles($(this).val());
+    });
+  });
 </script>
 </body>
 </html>
