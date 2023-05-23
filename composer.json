@@ -1,0 +1,23 @@
+{
+  "name": "m-derakhshi/laravel-stub-generator",
+  "description": "stubGeneratorDev",
+  "version": "1.0.000",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MDerakhshi\\LaravelStubGenerator\\StubGeneratorServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MDerakhshi\\LaravelStubGenerator\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "m-derakhshi/laravel-attachment": "^1.0"
+  },
+  "require-dev": {}
+}
