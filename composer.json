@@ -1,7 +1,6 @@
 {
   "name": "m-derakhshi/laravel-stub-generator",
   "description": "stubGeneratorDev",
-  "version": "1.0.000",
   "extra": {
     "laravel": {
       "providers": [
