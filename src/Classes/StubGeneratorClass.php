@@ -39,19 +39,26 @@ class StubGeneratorClass
           '@test-test@'              => Str::kebab($this->data['name']),
           '@test_test@'              => Str::snake($this->data['name']),
 
-          '@%NAMESPACE%@'     => $this->data['namespace'],
-          '@%STUDLY_NAME%@'   => ucfirst($this->data['name']),
-          '@%LOWER_NAME%@'    => lcfirst($this->data['name']),
-          '@%KEBAB_NAME%@'    => Str::kebab($this->data['name']),
-          '@%SNAKE_NAME%@'    => Str::snake($this->data['name']),
+          '@TestParent@' => ucfirst($this->data['parent']),
+          '@testParent@'   => lcfirst($this->data['parent']),
+          '@test-parent@'  => Str::kebab($this->data['parent']),
+          '@test_parent@'  => Str::snake($this->data['parent']),
+
+          '@%NAMESPACE%@'   => $this->data['namespace'],
+          '@%STUDLY_NAME%@' => ucfirst($this->data['name']),
+          '@%LOWER_NAME%@'  => lcfirst($this->data['name']),
+          '@%KEBAB_NAME%@'  => Str::kebab($this->data['name']),
+          '@%SNAKE_NAME%@'  => Str::snake($this->data['name']),
+
           '@%STUDLY_PARENT%@' => ucfirst($this->data['parent']),
           '@%LOWER_PARENT%@'  => lcfirst($this->data['parent']),
           '@%KEBAB_PARENT%@'  => Str::kebab($this->data['parent']),
           '@%SNAKE_PARENT%@'  => Str::snake($this->data['parent']),
-          '@%YEAR%@'          => date('Y'),
-          '@%MONTH%@'         => date('m'),
-          '@%DAY%@'           => date('d'),
-          '@%TIMESTAMP%@'     => ((((int) date('H') * 60) + (int) date('i')) * 60) + (int) date('s'),
+
+          '@%YEAR%@'      => date('Y'),
+          '@%MONTH%@'     => date('m'),
+          '@%DAY%@'       => date('d'),
+          '@%TIMESTAMP%@' => ((((int) date('H') * 60) + (int) date('i')) * 60) + (int) date('s'),
         ];
 
         return preg_replace(array_keys($replaces), array_values($replaces), $content);
