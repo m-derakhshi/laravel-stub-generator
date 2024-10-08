@@ -3,7 +3,7 @@
 namespace MDerakhshi\LaravelStubGenerator\Classes;
 
 use Illuminate\Support\Str;
-use MDerakhshi\LaravelAttachment\Helpers;
+use MDerakhshi\LaravelAttachment\MDHelpers;
 
 class StubGeneratorClass
 {
@@ -179,7 +179,7 @@ class StubGeneratorClass
     function copyModuleStubs(string $sourceDirectory, string $destinationDirectory, array $sourceFiles = []): void
     {
         if ( ! file_exists($destinationDirectory) || ! is_dir($destinationDirectory)) {
-            Helpers::makeDirectoryPath($destinationDirectory);
+            MDHelpers::makeDirectoryPath($destinationDirectory);
         }
         $sourceFiles = count($sourceFiles) == 0 ? $this->getFiles($sourceDirectory) : $sourceFiles;
         foreach ($sourceFiles as $file) {
@@ -187,14 +187,14 @@ class StubGeneratorClass
 
             if (is_dir($sourceDirectory.'/'.$file)) {
                 if ( ! file_exists($destinationDirectory.'/'.$newFileName) || ! is_dir($destinationDirectory.'/'.$newFileName)) {
-                    Helpers::makeDirectoryPath($destinationDirectory.'/'.$newFileName);
+                    MDHelpers::makeDirectoryPath($destinationDirectory.'/'.$newFileName);
                 }
                 continue;
             }
             $fileType = '.'.strtolower(pathinfo($file, PATHINFO_EXTENSION));
             $dirName  = dirname($destinationDirectory.'/'.$newFileName);
             if ( ! file_exists($dirName) || ! is_dir($dirName)) {
-                Helpers::makeDirectoryPath($dirName);
+                MDHelpers::makeDirectoryPath($dirName);
             }
 
             $newFilePath = $destinationDirectory.'/'.$newFileName;
