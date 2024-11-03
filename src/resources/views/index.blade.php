@@ -241,6 +241,10 @@
     let firstLetter = str.slice(0, 1);
     return firstLetter.toLowerCase() + str.substring(1);
   }
+  function ToSpaceCase(str) {
+    return str.replace(/([a-z0-9])([A-Z])/g, '$1 $2').toLowerCase();
+  }
+
 
   function ToSnakeCase(str) {
     return str
@@ -257,8 +261,8 @@
     $('*[data-real-name]').each(function () {
       $(this).find('span').html($(this).attr('data-real-name').replace('.stub', '')
         .replace('%YEAR%', todayDate.getFullYear()).replace('%MONTH%', todayDate.getMonth() + 1).replace('%DAY%', todayDate.getDate()).replace('%TIMESTAMP%', Math.floor(todayDate.getTime() / 1000))
-        .replace('%STUDLY_NAME%', UCFirstString(stubName)).replace('%LOWER_NAME%', LCFirstString(stubName)).replace('%SNAKE_NAME%', ToSnakeCase(stubName))
-        .replace('TestTest', UCFirstString(stubName)).replace('testTest', LCFirstString(stubName)).replace('test_test', ToSnakeCase(stubName)),
+        .replace('%STUDLY_NAME%', UCFirstString(stubName)).replace('%LOWER_NAME%', LCFirstString(stubName)).replace('%SNAKE_NAME%', ToSnakeCase(stubName)).replace('%SPACE_NAME%', ToSpaceCase(stubName))
+        .replace('TestTest', UCFirstString(stubName)).replace('test test', ToSpaceCase(stubName)).replace('testTest', LCFirstString(stubName)).replace('test_test', ToSnakeCase(stubName)),
       );
     });
   }

@@ -38,22 +38,26 @@ class StubGeneratorClass
           '@testTest@'               => lcfirst($this->data['name']),
           '@test-test@'              => Str::kebab($this->data['name']),
           '@test_test@'              => Str::snake($this->data['name']),
+          '@test test@'              => Str::snake($this->data['name'], ' '),
 
           '@TestParent@' => ucfirst($this->data['parent']),
           '@testParent@'   => lcfirst($this->data['parent']),
           '@test-parent@'  => Str::kebab($this->data['parent']),
           '@test_parent@'  => Str::snake($this->data['parent']),
+          '@test parent@'  => Str::snake($this->data['parent'], ' '),
 
           '@%NAMESPACE%@'   => $this->data['namespace'],
           '@%STUDLY_NAME%@' => ucfirst($this->data['name']),
           '@%LOWER_NAME%@'  => lcfirst($this->data['name']),
           '@%KEBAB_NAME%@'  => Str::kebab($this->data['name']),
           '@%SNAKE_NAME%@'  => Str::snake($this->data['name']),
+          '@%SPACE_NAME%@'  => Str::snake($this->data['name'], ' '),
 
           '@%STUDLY_PARENT%@' => ucfirst($this->data['parent']),
           '@%LOWER_PARENT%@'  => lcfirst($this->data['parent']),
           '@%KEBAB_PARENT%@'  => Str::kebab($this->data['parent']),
           '@%SNAKE_PARENT%@'  => Str::snake($this->data['parent']),
+          '@%SPACE_PARENT%@'  => Str::snake($this->data['parent'], ' '),
 
           '@%YEAR%@'      => date('Y'),
           '@%MONTH%@'     => date('m'),
